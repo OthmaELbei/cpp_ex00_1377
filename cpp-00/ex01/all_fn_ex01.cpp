@@ -6,7 +6,7 @@
 /*   By: oelbied <oelbied@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/31 21:22:53 by oelbied           #+#    #+#             */
-/*   Updated: 2025/08/31 21:55:21 by oelbied          ###   ########.fr       */
+/*   Updated: 2025/10/14 16:41:38 by oelbied          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,8 @@ void Contact ::setadd()
 std ::string Contact ::cont_word(std ::string word)
 {
 	std ::string newWord(10, ' ');
-	int i = 0;
+	std::string::size_type i = 0;
+	// int i = 0;
 	int k = 0;
 	if (word.size() > 10)
 	{

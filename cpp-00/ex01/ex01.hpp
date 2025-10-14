@@ -6,7 +6,7 @@
 /*   By: oelbied <oelbied@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/31 21:15:15 by oelbied           #+#    #+#             */
-/*   Updated: 2025/08/31 21:55:45 by oelbied          ###   ########.fr       */
+/*   Updated: 2025/10/14 16:41:57 by oelbied          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ public:
 	void getset(int i);
 	void schow();
 };
+
 
 class PhoneBook
 {

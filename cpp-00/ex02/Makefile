@@ -5,26 +5,27 @@
 #                                                     +:+ +:+         +:+      #
 #    By: oelbied <oelbied@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/10/14 16:34:38 by oelbied           #+#    #+#              #
-#    Updated: 2025/10/14 16:34:39 by oelbied          ###   ########.fr        #
+#    Created: 2025/10/14 16:59:51 by oelbied           #+#    #+#              #
+#    Updated: 2025/10/14 17:43:07 by oelbied          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-CC = g++
-CFLAGS = -Wall -Wextra -Werror
-FILES = megaphone.cpp
+
+CC = c++ 
+CFLAGS = -Wall -Wextra -Werror -std=c++98
+FILES = Account.cpp tests.cpp
 
 OPJECT = $(FILES:.cpp=.o)
 
-NAME = ex00
+NAME = ex01
 
 all : $(NAME)
 
 $(NAME): $(OPJECT)
 	$(CC) $(CFLAGS) $(OPJECT) -o $(NAME)
 
-%.o: %.cpp
+%.o: %.cpp Account.hpp
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:

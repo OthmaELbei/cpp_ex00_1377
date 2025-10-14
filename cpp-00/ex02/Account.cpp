@@ -6,7 +6,7 @@
 /*   By: oelbied <oelbied@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/01 16:37:01 by oelbied           #+#    #+#             */
-/*   Updated: 2025/09/01 22:31:50 by oelbied          ###   ########.fr       */
+/*   Updated: 2025/10/14 20:41:21 by oelbied          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int Account::_totalNbWithdrawals = 0;
 
 void Account :: _displayTimestamp( void )
 {
-	std :: time_t now =  std::time(nullptr);
+	std :: time_t now =  std::time(NULL);
 	std :: tm *ltm =std:: localtime(&now);
 
 	std:: cout << "[" << 1900 + ltm->tm_year << ltm->tm_mon + 1 << ltm->tm_mday << "_"  
@@ -42,6 +42,10 @@ void Account :: _displayTimestamp( void )
  }
 void	Account :: makeDeposit( int deposit )
 {
+	_displayTimestamp();
+	std::cout << " index:" << _accountIndex << ";p_amount:" << _amount
+	          << ";deposit:" << deposit << ";amount:" << (_amount + deposit)
+	          << ";nb_deposits:" << (_nbDeposits + 1) << std::endl;
 	_amount +=deposit;
 	_totalAmount += deposit;
 	_nbDeposits++;
@@ -50,9 +54,22 @@ void	Account :: makeDeposit( int deposit )
 }
 bool	Account ::makeWithdrawal( int withdrawal )
 {
-	if(withdrawal <_amount )
-	 return true;
-	 else return false;
+		_displayTimestamp();
+	std::cout << " index:" << _accountIndex << ";p_amount:" << _amount;
+	
+	if (withdrawal <= _amount) {
+		_amount -= withdrawal;
+		_totalAmount -= withdrawal;
+		_nbWithdrawals++;
+		_totalNbWithdrawals++;
+		std::cout << ";withdrawal:" << withdrawal << ";amount:" << _amount
+		          << ";nb_withdrawals:" << _nbWithdrawals << std::endl;
+		return true;
+	}
+	else {
+		std::cout << ";withdrawal:refused" << std::endl;
+		return false;
+	}
 }
 int Account ::checkAmount( void ) const
 {
@@ -91,8 +108,9 @@ int Account ::checkAmount( void ) const
 	     _displayTimestamp();
 		std :: cout  << "  index:";
 		
-	std :: cout << _accountIndex <<";amount:" << _amount;
-	std :: cout<< ";deposits:" << getNbDeposits()  << std:: endl;
+	std :: cout << _accountIndex <<";amount:" << _amount
+	 << ";deposits:" << _nbDeposits << ";withdrawals:" << _nbWithdrawals
+	          << std::endl;
    } 
     void Account ::displayAccountsInfos( void )
 	{
