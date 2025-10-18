@@ -6,7 +6,7 @@
 /*   By: oelbied <oelbied@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/31 21:15:15 by oelbied           #+#    #+#             */
-/*   Updated: 2025/10/14 16:41:57 by oelbied          ###   ########.fr       */
+/*   Updated: 2025/10/18 16:16:41 by oelbied          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 #define EX01_HPP
 
 #include <iostream>
+#include <string>
+#include <cctype>
 
 class Contact
 {
@@ -41,9 +43,11 @@ public:
 	Contact bookcall[8];
 
 	void addcontact(Contact cont);
-	void showall();
+	int showall();
+
 	void afche(int nber);
 	int afchecontact(int nber);
 };
 void afchechoui();
+	std:: string trim(std :: string df);
 #endif
