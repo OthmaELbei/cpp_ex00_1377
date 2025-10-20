@@ -6,11 +6,11 @@
 #    By: oelbied <oelbied@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/14 16:34:20 by oelbied           #+#    #+#              #
-#    Updated: 2025/10/14 16:42:47 by oelbied          ###   ########.fr        #
+#    Updated: 2025/10/20 15:01:49 by oelbied          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC = g++
+CC = c++
 CFLAGS = -Wall -Wextra -Werror
 FILES = all_fn_ex01.cpp ex01.cpp
 
