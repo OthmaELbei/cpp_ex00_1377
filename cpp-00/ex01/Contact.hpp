@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ex01.hpp                                           :+:      :+:    :+:   */
+/*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oelbied <oelbied@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/31 21:15:15 by oelbied           #+#    #+#             */
-/*   Updated: 2025/10/18 16:16:41 by oelbied          ###   ########.fr       */
+/*   Created: 2025/10/25 10:10:10 by oelbied           #+#    #+#             */
+/*   Updated: 2025/10/25 14:43:27 by oelbied          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef EX01_HPP
-#define EX01_HPP
+#ifndef CONTACT_HPP
+#define CONTACT_HPP
+
 
 #include <iostream>
 #include <string>
 #include <cctype>
+#include <cstdlib>
 
 class Contact
 {
@@ -30,24 +32,8 @@ public:
 	void setadd();
 	std ::string cont_word(std ::string word);
 	void getset(int i);
-	void schow();
+	int schow();
 };
+int tchek(std :: string ds, int nb);
 
-
-class PhoneBook
-{
-private:
-	static int index;
-
-public:
-	Contact bookcall[8];
-
-	void addcontact(Contact cont);
-	int showall();
-
-	void afche(int nber);
-	int afchecontact(int nber);
-};
-void afchechoui();
-	std:: string trim(std :: string df);
 #endif

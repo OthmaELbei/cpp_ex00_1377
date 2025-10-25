@@ -6,18 +6,18 @@
 #    By: oelbied <oelbied@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/14 16:34:38 by oelbied           #+#    #+#              #
-#    Updated: 2025/10/20 15:01:55 by oelbied          ###   ########.fr        #
+#    Updated: 2025/10/25 16:41:02 by oelbied          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
 CC = c++
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -std=c++98
 FILES = megaphone.cpp
 
 OPJECT = $(FILES:.cpp=.o)
 
-NAME = ex00
+NAME = megaphone
 
 all : $(NAME)
 

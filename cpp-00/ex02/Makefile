@@ -6,7 +6,7 @@
 #    By: oelbied <oelbied@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/14 16:59:51 by oelbied           #+#    #+#              #
-#    Updated: 2025/10/14 17:43:07 by oelbied          ###   ########.fr        #
+#    Updated: 2025/10/25 16:40:44 by oelbied          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ FILES = Account.cpp tests.cpp
 
 OPJECT = $(FILES:.cpp=.o)
 
-NAME = ex01
+NAME = Account
 
 all : $(NAME)
 

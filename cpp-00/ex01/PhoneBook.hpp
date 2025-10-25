@@ -1,37 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oelbied <oelbied@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/25 16:23:25 by oelbied           #+#    #+#             */
-/*   Updated: 2025/10/24 14:10:01 by oelbied          ###   ########.fr       */
+/*   Created: 2025/08/31 21:15:15 by oelbied           #+#    #+#             */
+/*   Updated: 2025/10/25 16:40:19 by oelbied          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef PHONEBOOK_HPP
+#define PHONEBOOK_HPP
+
 #include <iostream>
+#include <string>
+#include <cctype>
+#include <cstdlib>
+#include <sstream>
+#include "Contact.hpp"
 
-int main(int ac,char **av)
+
+class PhoneBook
 {
-	int i = 1;
-	int j = 0;
+private:
+	static int index;
 
-	if(ac <= 1)
-	{
-		std :: cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std:: endl;;
-	}else
-	{
-		while(av[i])
-		{
-			j = 0;
-			while(av[i][j])
-			{
-				std :: cout << char(toupper(av[i][j]));
-				j++;
-			}
-			i++;
-		}
-			std :: cout << std :: endl;
-	}
-}
+	public:
+	Contact bookcall[8];
+	
+	void addcontact(Contact cont);
+	int showall();
+
+	int afche(int nber);
+	int afchecontact(int nber);
+};
+void afchechoui();
+	std:: string trim(std :: string df);
+#endif

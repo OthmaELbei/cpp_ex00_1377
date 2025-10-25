@@ -6,7 +6,7 @@
 /*   By: oelbied <oelbied@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/01 16:37:01 by oelbied           #+#    #+#             */
-/*   Updated: 2025/10/19 14:53:53 by oelbied          ###   ########.fr       */
+/*   Updated: 2025/10/24 14:08:11 by oelbied          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,6 @@ int Account ::checkAmount( void ) const
 	 _nbDeposits = 0;
 	 _nbWithdrawals = 0;
     _nbAccounts++;
-	// _nbWithdrawals++;
 	_totalAmount += _amount;
 	std :: cout <<_accountIndex <<";amount:" << _amount;
 	std :: cout << ";created"<< std:: endl;
@@ -106,7 +105,7 @@ int Account ::checkAmount( void ) const
 	std :: cout  << "  index:";
 
 	std :: cout << _accountIndex <<";amount:" << _amount;
-	std :: cout <<_nbDeposits<< ";closed" << std:: endl;
+	std :: cout << ";closed" << std:: endl;
    }
    void	 Account :: displayStatus( void ) const
    {

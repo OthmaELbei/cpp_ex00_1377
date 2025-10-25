@@ -1,16 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ex01.cpp                                           :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oelbied <oelbied@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/30 20:23:12 by oelbied           #+#    #+#             */
-/*   Updated: 2025/10/18 20:42:02 by oelbied          ###   ########.fr       */
+/*   Updated: 2025/10/25 15:33:31 by oelbied          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ex01.hpp"
+#include "PhoneBook.hpp"
+#include <cstdlib>
 
 int PhoneBook::index = 0;
 
@@ -25,6 +26,11 @@ int main()
 	afchechoui();
 	while (getline(std :: cin, line))
 	{
+		if (std::cin.eof() || std::cin.fail())
+        {
+            std :: cout << std ::endl ;
+            std::cin.eof() ? std::exit(0): std::exit(1);
+        }
 		spline = trim(line);
 		if(spline == "EXIT")
 		{
@@ -38,38 +44,48 @@ int main()
 		}
 		if(spline == "SEARCH")
 		{
-			
 			int nb = ds.showall();
 			if(nb == 0)
 			{ 
-				std :: cout << "\n--- < no fined any contect plese add any contact > --- \n\n";  
+				std :: cout << "\n--- < No contacts found. Please add one > --- \n\n";  
 				 afchechoui();
 			}else
 			{
-			std :: cout << "Plz add any index you whant betouin 0 to 8:  "  ;
-			if(!getline(std :: cin, Index))
+			std :: cout << "Please add any index you want between 0 and 8:  "  ;
+			getline(std :: cin, Index);
+			if (std::cin.eof() || std::cin.fail())
 			{
-				std :: cout << "\n";
-				std :: exit(1);
+				std :: cout << std ::endl ;
+				std::cin.eof() ? std::exit(0): std::exit(1);
 			}
-			if((Index.size() == 1) && isdigit(Index[0]))
+			if(Index.empty())
 			{
-				int nbr = char(Index[0]) - '0';
-				if(!ds.afchecontact(nbr) )
+				std :: cout << " \n  is empty " << std :: endl ;
+				afchechoui();
+			}
+			else
+			{
+				if(tchek(Index, 1))
 				{
-					ds.afche(nbr);
-				    afchechoui();
+					std :: cout << " \nThe number you added is not correct"<< std :: endl;
+					afchechoui();
 				}else{
-					std :: cout << "    --<< number is not finding    >>---   " << std :: endl;
-					 afchechoui();
+					int num = 10;
+        		std::stringstream buffer(Index);
+        			buffer >> num;
+					std :: cout << num << std ::endl ;
+				if(ds.afchecontact(num) == 0 && ds.afche(num) == 0)
+				{
+				    afchechoui();
+				}
+				else{
+						std :: cout << "The number you added is not correct"<< std :: endl;
+				 afchechoui();
 				}
 				
-			}
-			else{
+				}
 				
-				std :: cout << "the number you add not exat"<< std :: endl;
-				 afchechoui();
-			}
+				}
 			}
 	
 		}
@@ -79,5 +95,4 @@ int main()
 		}
 	}
 	std :: cout <<  line << std :: endl;
-	
 }
