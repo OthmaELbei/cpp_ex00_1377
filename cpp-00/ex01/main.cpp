@@ -6,7 +6,7 @@
 /*   By: oelbied <oelbied@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/30 20:23:12 by oelbied           #+#    #+#             */
-/*   Updated: 2025/10/25 15:33:31 by oelbied          ###   ########.fr       */
+/*   Updated: 2025/10/26 17:56:49 by oelbied          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,6 @@ int main()
 					int num = 10;
         		std::stringstream buffer(Index);
         			buffer >> num;
-					std :: cout << num << std ::endl ;
 				if(ds.afchecontact(num) == 0 && ds.afche(num) == 0)
 				{
 				    afchechoui();
@@ -82,11 +81,9 @@ int main()
 						std :: cout << "The number you added is not correct"<< std :: endl;
 				 afchechoui();
 				}
-				
-				}
-				
 				}
 			}
+		}
 	
 		}
 		else 

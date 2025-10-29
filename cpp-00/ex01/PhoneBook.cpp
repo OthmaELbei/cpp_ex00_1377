@@ -6,7 +6,7 @@
 /*   By: oelbied <oelbied@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/31 21:22:53 by oelbied           #+#    #+#             */
-/*   Updated: 2025/10/25 14:27:46 by oelbied          ###   ########.fr       */
+/*   Updated: 2025/10/29 09:30:11 by oelbied          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ void afchechoui()
 
 void PhoneBook ::addcontact (Contact cont)
 {
-
 	if (index >= 0)
 		bookcall[index % 8] = cont;
 	index++;
@@ -44,7 +43,7 @@ int PhoneBook ::afche(int nber)
 }
 int PhoneBook ::afchecontact(int nber)
 {
-	if (nber > -1 && nber <= index)
+	if (nber > -1 && nber < index)
 	{
 		return 0;
 	}	

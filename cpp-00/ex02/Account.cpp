@@ -6,7 +6,7 @@
 /*   By: oelbied <oelbied@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/01 16:37:01 by oelbied           #+#    #+#             */
-/*   Updated: 2025/10/24 14:08:11 by oelbied          ###   ########.fr       */
+/*   Updated: 2025/10/26 15:42:10 by oelbied          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,6 @@ bool	Account ::makeWithdrawal( int withdrawal )
 int Account ::checkAmount( void ) const
 {
 	return 1;
-		// std :: cout << " withdrawals:" << withdrawal;
 }
   Account :: Account( int initial_deposit )
   {
@@ -96,8 +95,7 @@ int Account ::checkAmount( void ) const
 
    Account :: Account( void )
    {
-	//  _accountIndex++;
-	
+
    }
    Account :: ~Account( void )
    {

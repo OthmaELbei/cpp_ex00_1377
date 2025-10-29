@@ -6,7 +6,7 @@
 /*   By: oelbied <oelbied@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/25 16:23:25 by oelbied           #+#    #+#             */
-/*   Updated: 2025/10/24 14:10:01 by oelbied          ###   ########.fr       */
+/*   Updated: 2025/10/26 15:43:30 by oelbied          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int main(int ac,char **av)
 
 	if(ac <= 1)
 	{
-		std :: cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std:: endl;;
+		std :: cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std:: endl;
 	}else
 	{
 		while(av[i])
